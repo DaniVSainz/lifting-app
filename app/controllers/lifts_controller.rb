@@ -1,4 +1,5 @@
 class LiftsController < ApplicationController
   def index
-  end 
+    @lifts = Lift.all
+  end
 end
