@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :lifts
   root 'lifts#index'
+  resources :lifts
+  post "/" => "lifts#create"
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

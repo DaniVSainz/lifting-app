@@ -1,5 +1,4 @@
 class LiftsController < ApplicationController
-
   def create
     @lift = Lift.new(lift_params)
 
@@ -10,7 +9,12 @@ class LiftsController < ApplicationController
     end
   end
 
-  def index
-    @lifts = Lift.all
+	def index
+		@lifts = Lift.all
+	end
+
+  private
+  def lift_params
+    params.require(:lift).permit(:date, :liftname, :ismetric, :weightlifted, :repsperformed, :onerm)
   end
 end
