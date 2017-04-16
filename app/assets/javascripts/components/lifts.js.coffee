@@ -18,9 +18,9 @@
     @replaceState lifts: lifts
   render: ->
     React.DOM.div
-      className: 'lifts'
+      className: 'lifts text-center'
       React.DOM.h1
-        className: 'title'
+        className: 'title text-center'
         'Lifts'
        React.createElement LiftForm, handleNewLift: @addLift
        React.DOM.table
